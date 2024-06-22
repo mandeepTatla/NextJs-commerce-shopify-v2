@@ -3,12 +3,14 @@ import { GridTileImage } from 'components/grid/tile';
 import { Product } from 'lib/shopify/types';
 import Link from 'next/link';
 
+import styles from './ProductGridItems.module.scss';
+
 export default function ProductGridItems({ products }: { products: Product[] }) {
   return (
     <>
       {products.map((product) => (
-        <Grid.Item key={product.handle} className="animate-fadeIn">
-          <Link className="relative inline-block h-full w-full" href={`/product/${product.handle}`}>
+        <Grid.Item key={product.handle} className={styles.fadeIn}>
+          <Link className={styles.link} href={`/product/${product.handle}`}>
             <GridTileImage
               alt={product.title}
               label={{

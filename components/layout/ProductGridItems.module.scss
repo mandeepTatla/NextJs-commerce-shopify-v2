@@ -1,0 +1,19 @@
+.fadeIn {
+  animation: fadeIn 1s ease-in-out;
+}
+
+.link {
+  position: relative;
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

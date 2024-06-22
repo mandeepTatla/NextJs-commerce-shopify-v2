@@ -3,6 +3,8 @@ import ProductGridItems from 'components/layout/product-grid-items';
 import { defaultSort, sorting } from 'lib/constants';
 import { getProducts } from 'lib/shopify';
 
+import styles from './SearchPage.module.scss';
+
 export const metadata = {
   title: 'Search',
   description: 'Search for products in the store.'
@@ -22,15 +24,15 @@ export default async function SearchPage({
   return (
     <>
       {searchValue ? (
-        <p className="mb-4">
+        <p className={styles.resultsText}>
           {products.length === 0
             ? 'There are no products that match '
             : `Showing ${products.length} ${resultsText} for `}
-          <span className="font-bold">&quot;{searchValue}&quot;</span>
+          <span className={styles.searchQuery}>&quot;{searchValue}&quot;</span>
         </p>
       ) : null}
       {products.length > 0 ? (
-        <Grid className="grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+        <Grid className={styles.grid}>
           <ProductGridItems products={products} />
         </Grid>
       ) : null}
