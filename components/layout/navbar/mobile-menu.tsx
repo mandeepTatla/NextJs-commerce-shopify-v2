@@ -9,7 +9,7 @@ import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
 import { Menu } from 'lib/shopify/types';
 import Search, { SearchSkeleton } from './search';
 
-import styles from './MobileMenu.module.scss'; // Importing the SCSS module
+import styles from './MobileMenu.module.css'; // Importing the SCSS module
 
 export default function MobileMenu({ menu }: { menu: Menu[] }) {
   const pathname = usePathname();

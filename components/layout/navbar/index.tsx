@@ -5,7 +5,7 @@ import LogoSquare from 'components/logo-square';
 import { getMegaMenu } from 'lib/shopify';
 import Link from 'next/link';
 import { Suspense } from 'react';
-import classes from './index.module.scss';
+import classes from './index.module.css';
 import MobileMenu from './mobile-menu';
 import Search, { SearchSkeleton } from './search';
 

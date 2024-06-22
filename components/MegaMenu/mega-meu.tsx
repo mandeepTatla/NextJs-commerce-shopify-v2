@@ -1,5 +1,5 @@
 import { MenuItem } from '../../lib/shopify/types';
-import classes from './MegaMenu.module.scss';
+import classes from './MegaMenu.module.css';
 import MenuItemComponent from './menu-item-component';
 
 type MegaMenuProps = {

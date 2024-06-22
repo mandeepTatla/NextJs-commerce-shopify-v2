@@ -4,7 +4,7 @@ import { getMenu } from 'lib/shopify';
 import Link from 'next/link';
 import { Suspense } from 'react';
 
-import styles from './Footer.module.scss'; // Importing the SCSS module
+import styles from './Footer.module.css'; // Importing the SCSS module
 
 const { COMPANY_NAME, SITE_NAME } = process.env;
 
