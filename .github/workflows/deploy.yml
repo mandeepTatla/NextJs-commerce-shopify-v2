@@ -21,17 +21,22 @@ jobs:
         with:
           node-version: '18'
 
+      - name: Set up pnpm
+        uses: pnpm/action-setup@v2
+        with:
+          version: 8
+
       - name: Install dependencies
-        run: npm install
+        run: pnpm install
 
       - name: Build project
-        run: npm run build
+        run: pnpm run build
 
       - name: Deploy to Vercel
         env:
           VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
         run: |
-          npm install -g vercel
+          pnpm install -g vercel
           if [ "${{ github.event_name }}" = "push" ]; then
             vercel --prod --token $VERCEL_TOKEN
           else
