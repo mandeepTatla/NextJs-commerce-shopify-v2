@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import { MenuItem } from '../../lib/shopify/types';
-import styles from './MenuItemComponent.module.css'; // Importing the SCSS module
+import styles from './MenuItemComponent.module.scss'; // Importing the SCSS module
 
 type MenuItemProps = {
   item: MenuItem;
